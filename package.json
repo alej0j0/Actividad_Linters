@@ -4,6 +4,8 @@
   "description": "Actividad linters",
   "main": "index.js",
   "scripts": {
+    "lint:css": "stylelint '**/*.css'",
+    "lint:html": "hint index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +17,11 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "hintConfig": {
+    "connector": {
+      "name": "jsdom"
+    },
+    "extends": ["web-recommended"]
   }
 }
